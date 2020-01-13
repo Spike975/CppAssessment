@@ -1,0 +1,37 @@
+﻿  main.cpp
+c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\main.cpp(134): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\main.cpp(135): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\main.cpp(139): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\main.cpp(140): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\main.cpp(144): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\main.cpp(145): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\main.cpp(149): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\main.cpp(150): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  player.cpp
+c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\player.cpp(14): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\player.cpp(23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+LINK : warning LNK4098: defaultlib 'MSVCRTD' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Generating code
+  All 17 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+raylib.lib(core.obj) : warning LNK4099: PDB 'raylib.pdb' was not found with 'raylib.lib(core.obj)' or at 'C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\TicTacToe\x64\Release\raylib.pdb'; linking object as if no debug info
+raylib.lib(shapes.obj) : warning LNK4099: PDB 'raylib.pdb' was not found with 'raylib.lib(shapes.obj)' or at 'C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\TicTacToe\x64\Release\raylib.pdb'; linking object as if no debug info
+raylib.lib(text.obj) : warning LNK4099: PDB 'raylib.pdb' was not found with 'raylib.lib(text.obj)' or at 'C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\TicTacToe\x64\Release\raylib.pdb'; linking object as if no debug info
+raylib.lib(textures.obj) : warning LNK4099: PDB 'raylib.pdb' was not found with 'raylib.lib(textures.obj)' or at 'C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\TicTacToe\x64\Release\raylib.pdb'; linking object as if no debug info
+raylib.lib(utils.obj) : warning LNK4099: PDB 'raylib.pdb' was not found with 'raylib.lib(utils.obj)' or at 'C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\TicTacToe\x64\Release\raylib.pdb'; linking object as if no debug info
+raylib.lib(context.obj) : warning LNK4099: PDB 'glfw_objlib.pdb' was not found with 'raylib.lib(context.obj)' or at 'C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\TicTacToe\x64\Release\glfw_objlib.pdb'; linking object as if no debug info
+raylib.lib(init.obj) : warning LNK4099: PDB 'glfw_objlib.pdb' was not found with 'raylib.lib(init.obj)' or at 'C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\TicTacToe\x64\Release\glfw_objlib.pdb'; linking object as if no debug info
+raylib.lib(input.obj) : warning LNK4099: PDB 'glfw_objlib.pdb' was not found with 'raylib.lib(input.obj)' or at 'C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\TicTacToe\x64\Release\glfw_objlib.pdb'; linking object as if no debug info
+raylib.lib(monitor.obj) : warning LNK4099: PDB 'glfw_objlib.pdb' was not found with 'raylib.lib(monitor.obj)' or at 'C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\TicTacToe\x64\Release\glfw_objlib.pdb'; linking object as if no debug info
+raylib.lib(vulkan.obj) : warning LNK4099: PDB 'glfw_objlib.pdb' was not found with 'raylib.lib(vulkan.obj)' or at 'C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\TicTacToe\x64\Release\glfw_objlib.pdb'; linking object as if no debug info
+raylib.lib(window.obj) : warning LNK4099: PDB 'glfw_objlib.pdb' was not found with 'raylib.lib(window.obj)' or at 'C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\TicTacToe\x64\Release\glfw_objlib.pdb'; linking object as if no debug info
+raylib.lib(win32_init.obj) : warning LNK4099: PDB 'glfw_objlib.pdb' was not found with 'raylib.lib(win32_init.obj)' or at 'C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\TicTacToe\x64\Release\glfw_objlib.pdb'; linking object as if no debug info
+raylib.lib(win32_joystick.obj) : warning LNK4099: PDB 'glfw_objlib.pdb' was not found with 'raylib.lib(win32_joystick.obj)' or at 'C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\TicTacToe\x64\Release\glfw_objlib.pdb'; linking object as if no debug info
+raylib.lib(win32_monitor.obj) : warning LNK4099: PDB 'glfw_objlib.pdb' was not found with 'raylib.lib(win32_monitor.obj)' or at 'C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\TicTacToe\x64\Release\glfw_objlib.pdb'; linking object as if no debug info
+raylib.lib(win32_time.obj) : warning LNK4099: PDB 'glfw_objlib.pdb' was not found with 'raylib.lib(win32_time.obj)' or at 'C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\TicTacToe\x64\Release\glfw_objlib.pdb'; linking object as if no debug info
+raylib.lib(win32_thread.obj) : warning LNK4099: PDB 'glfw_objlib.pdb' was not found with 'raylib.lib(win32_thread.obj)' or at 'C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\TicTacToe\x64\Release\glfw_objlib.pdb'; linking object as if no debug info
+raylib.lib(win32_window.obj) : warning LNK4099: PDB 'glfw_objlib.pdb' was not found with 'raylib.lib(win32_window.obj)' or at 'C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\TicTacToe\x64\Release\glfw_objlib.pdb'; linking object as if no debug info
+raylib.lib(wgl_context.obj) : warning LNK4099: PDB 'glfw_objlib.pdb' was not found with 'raylib.lib(wgl_context.obj)' or at 'C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\TicTacToe\x64\Release\glfw_objlib.pdb'; linking object as if no debug info
+raylib.lib(egl_context.obj) : warning LNK4099: PDB 'glfw_objlib.pdb' was not found with 'raylib.lib(egl_context.obj)' or at 'C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\TicTacToe\x64\Release\glfw_objlib.pdb'; linking object as if no debug info
+raylib.lib(osmesa_context.obj) : warning LNK4099: PDB 'glfw_objlib.pdb' was not found with 'raylib.lib(osmesa_context.obj)' or at 'C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\TicTacToe\x64\Release\glfw_objlib.pdb'; linking object as if no debug info
+  raygame.vcxproj -> C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\TicTacToe\x64\Release\raygame.exe
