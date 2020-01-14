@@ -1,18 +1,20 @@
 ﻿  main.cpp
-c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\main.cpp(134): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\main.cpp(135): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\main.cpp(139): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\main.cpp(140): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\main.cpp(144): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\main.cpp(145): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\main.cpp(149): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\main.cpp(150): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\main.cpp(152): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\main.cpp(153): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\main.cpp(157): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\main.cpp(158): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\main.cpp(162): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\main.cpp(163): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\main.cpp(167): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\main.cpp(168): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
   player.cpp
 c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\player.cpp(14): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 c:\users\s199026\source\repos\jacobfirsdoncppassessment\tictactoe\raygame\player.cpp(23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 LINK : warning LNK4098: defaultlib 'MSVCRTD' conflicts with use of other libs; use /NODEFAULTLIB:library
   Generating code
-  All 17 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  5 of 17 functions (29.4%) were compiled, the rest were copied from previous compilation.
+    4 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
 raylib.lib(core.obj) : warning LNK4099: PDB 'raylib.pdb' was not found with 'raylib.lib(core.obj)' or at 'C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\TicTacToe\x64\Release\raylib.pdb'; linking object as if no debug info
 raylib.lib(shapes.obj) : warning LNK4099: PDB 'raylib.pdb' was not found with 'raylib.lib(shapes.obj)' or at 'C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\TicTacToe\x64\Release\raylib.pdb'; linking object as if no debug info
