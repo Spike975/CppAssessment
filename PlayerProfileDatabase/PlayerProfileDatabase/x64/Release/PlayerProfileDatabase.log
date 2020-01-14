@@ -1,4 +1,8 @@
 ﻿  Files.cpp
-Files.obj : error LNK2005: "void __cdecl deleteArray(class Player *)" (?deleteArray@@YAXPEAVPlayer@@@Z) already defined in Files.obj
-Files.obj : error LNK2005: "class Player * __cdecl copy(class Player *)" (?copy@@YAPEAVPlayer@@PEAV1@@Z) already defined in Files.obj
-C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\PlayerProfileDatabase\x64\Release\PlayerProfileDatabase.exe : fatal error LNK1169: one or more multiply defined symbols found
+  main.cpp
+  Generating code
+  17 of 223 functions ( 7.6%) were compiled, the rest were copied from previous compilation.
+    5 functions were new in current compilation
+    16 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  PlayerProfileDatabase.vcxproj -> C:\Users\s199026\source\repos\JacobFirsdonCppAssessment\PlayerProfileDatabase\x64\Release\PlayerProfileDatabase.exe
