@@ -91,3 +91,52 @@ void read(string file) {
 		cout << "No File as specified point";
 	}
 }
+//Deletes a single player
+Player * copySub(Player * player, int * size, int change) {
+	Player * otherPlayer = new Player[*size-1];
+	for (int i = 0; i < *size-1; i++) {
+		if (i < change) {
+			otherPlayer[i] = player[i];
+		}
+		else {
+			otherPlayer[i] = player[i + 1];
+		}
+	}
+	deleteArray(player);
+	*size -= 1;
+	return otherPlayer;
+}
+//Creates a copy of the array, then adds or subtract
+Player * copyPlus(Player * player, int * size, int change) {
+	Player * playerTemp = new Player[*size + change];
+	for (int i = 0; i < *size + change; i++) {
+		if (i < *size) {
+			playerTemp[i] = player[i];
+		}
+		else {
+			playerTemp[i].setName("GENERIC_NAME");
+			playerTemp[i].setAttack(0);
+			playerTemp[i].setHealth(0);
+		}
+		
+	}
+	deleteArray(player);
+	*size += change;
+	return playerTemp;
+}
+//Copies the array
+Player * copyArray(Player * player) {
+	return player;
+}
+Player * purgeArray(int * size) {
+	Player * player = new Player[1];
+	player[0].setName("GENERIC_NAME");
+	player[0].setAttack(0);
+	player[0].setHealth(0);
+	*size = 1;
+	return player;
+}
+//Deletes the array of players
+void deleteArray(Player * player) {
+	delete[] player;
+}
