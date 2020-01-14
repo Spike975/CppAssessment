@@ -18,9 +18,10 @@ int main()
 	//--------------------------------------------------------------------------------------
 
 	int screen = 0;
+	int boardSize;
 
 	//sets the size of the screen
-	std::cout << "Please enter a size of the  screen\n";
+	std::cout << "Please enter a size of the screen:\n";
 	std::cin >> screen;
 
 	if (screen < 600) {
@@ -30,6 +31,20 @@ int main()
 	else if (screen > 1000) {
 		std::cout << "Size to large... Auto update will incur\n";
 		screen = 1000;
+	}
+
+
+	//Sets size of board
+	std::cout << "Please enter a size of the board:\n";
+	std::cin >> boardSize;
+
+	if (boardSize < 2) {
+		std::cout << "Size to small... Auto update will incur\n";
+		boardSize = 2;
+	}
+	else if (boardSize > 10) {
+		std::cout << "Size to large for screen... Auto update will incur\n";
+		boardSize = 10;
 	}
 
 	bool onePlayer = false;
@@ -46,27 +61,30 @@ int main()
 	one->color = RAYWHITE;
 	two->color = RAYWHITE;
 
-	int ** board = new int*[3];
-	for (int i = 0; i < 3; i++) {
-			board[i] = new int[3];
+	int ** board = new int*[boardSize];
+	for (int i = 0; i < boardSize; i++) {
+			board[i] = new int[boardSize];
 	}
-	for (int i = 0; i < 3; i++) {
-		for (int x = 0; x < 3; x++) {
+	for (int i = 0; i < boardSize; i++) {
+		for (int x = 0; x < boardSize; x++) {
 			board[i][x] = 0;
 		}
 	}
 	//The area for the boxes of the board
-	Rectangle checkers[3][3];
+	Rectangle ** checkers = new Rectangle*[boardSize];
+	for (int i = 0; i < boardSize; i++) {
+		checkers[i] = new Rectangle[boardSize];
+	}
 
 	InitWindow(screen, screen, "Basic Tic-Tac-Toe");
 
 	//creats the board for the game
-	for (int i = 0; i < 3; i++) {
-		for(int x = 0; x < 3; x++){
-			checkers[i][x].x = (float)(GetScreenWidth() / 8) + ((GetScreenWidth() * 3 / 4) / 3 * x);
-			checkers[i][x].y = (float)(GetScreenHeight() / 8) + ((GetScreenHeight() * 3 / 4) / 3 * i);
-			checkers[i][x].height = (float)(GetScreenWidth() * 3 / 4) / 3;
-			checkers[i][x].width = (float)(GetScreenHeight() * 3 / 4) / 3;
+	for (int i = 0; i < boardSize; i++) {
+		for (int x = 0; x < boardSize; x++) {
+			checkers[i][x].x = (float)(GetScreenWidth() / ((boardSize * 2) + 2)) + ((GetScreenWidth() * boardSize / (boardSize + 1)) / boardSize * x);
+			checkers[i][x].y = (float)(GetScreenHeight() / ((boardSize * 2) + 2)) + ((GetScreenHeight() * boardSize / (boardSize + 1)) / boardSize * i);
+			checkers[i][x].height = (float)(GetScreenWidth() * boardSize / (boardSize+1)) / boardSize;
+			checkers[i][x].width = (float)(GetScreenHeight() * boardSize / (boardSize+1)) / boardSize;
 		}
 	}
 	SetTargetFPS(60);
@@ -81,8 +99,8 @@ int main()
 		//----------------------------------------------------------------------------------
 		//Resets game
 		if (IsKeyPressed(KEY_R)) {
-			for (int i = 0; i < 3; i++) {
-				for (int x = 0; x < 3; x++) {
+			for (int i = 0; i < boardSize; i++) {
+				for (int x = 0; x < boardSize; x++) {
 					board[i][x] = 0;
 				}
 			}
@@ -120,14 +138,14 @@ int main()
 		ClearBackground(RAYWHITE);
 
 		//Draws the board
-		drawGrid(checkers);
+		drawGrid(checkers, boardSize);
 		
 		//Draws the scores of the players
 		DrawText(FormatText("Player 1: %01i", one->score), 10, 0, 20, one->color);
 		DrawText(FormatText("Player 2: %01i", two->score), GetScreenWidth()-150, 0, 20, two->color);
 
 		//Draws the shapes
-		drawShapes(board,one->color,two->color);
+		drawShapes(board,one->color,two->color,boardSize);
 		//Initial Startup for color pick
 		if (start) {
 			Rectangle Blue;
@@ -237,8 +255,8 @@ int main()
 		//Main loop for game
 		else {
 			//Player pick the square they wish to chose
-			for (int i = 0; i < 3; i++) {
-				for (int x = 0; x < 3; x++) {
+			for (int i = 0; i < boardSize; i++) {
+				for (int x = 0; x < boardSize; x++) {
 					if (customCollision(GetMousePosition(), checkers[i][x])) {
 						if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
 							if (board[i][x] == 0) {
@@ -250,7 +268,7 @@ int main()
 				}
 			}
 			//Checks board to see if Player 1 won
-			if (winCondition(board) == 1) {
+			if (winCondition(board,boardSize) == 1) {
 				DrawRectangle((GetScreenWidth() / 2) - 150, (GetScreenWidth() / 2) - 150, 300, 300, LIGHTGRAY);
 				DrawText("Player One Wins!", (GetScreenWidth() / 2) - 90, (GetScreenWidth() / 2) - 90, 20, BLACK);
 				DrawText("Press R to reset game", (GetScreenWidth() / 2) - 120, (GetScreenWidth() / 2) - 20, 20, BLACK);
@@ -260,7 +278,7 @@ int main()
 				}
 			}
 			//Checks board to see if Player 2 won
-			else if (winCondition(board) == -1) {
+			else if (winCondition(board,boardSize) == -1) {
 				DrawRectangle(150, 150, 300, 300, LIGHTGRAY);
 				DrawText("Player Two Wins!", (GetScreenWidth() / 2) - 90, (GetScreenWidth() / 2) - 90, 20, BLACK);
 				DrawText("Press R to reset game", (GetScreenWidth() / 2) - 120, (GetScreenWidth() / 2) - 20, 20, BLACK);
@@ -270,7 +288,7 @@ int main()
 				}
 			}
 			//Checks board to see if no one won
-			else if (noWin(board)) {
+			else if (noWin(board,boardSize)) {
 				DrawRectangle((GetScreenHeight() / 2) - 150, (GetScreenHeight() / 2) - 150, 300, 300, LIGHTGRAY);
 				DrawText("Looks like a stalemate.", (GetScreenWidth() / 2) - 115, (GetScreenWidth() / 2) - 90, 20, BLACK);
 				DrawText("Press R to reset game", (GetScreenWidth() / 2) - 120, (GetScreenWidth() / 2) - 20, 20, BLACK);
@@ -289,6 +307,7 @@ int main()
 		delete[] board[i];
 	}
 	delete[] board;
+	delete[] checkers;
 	delete one;
 	delete two;
 	return 0;
